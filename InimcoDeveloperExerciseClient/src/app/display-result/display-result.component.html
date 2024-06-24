@@ -1,0 +1,7 @@
+<mat-card *ngIf="result">
+    <p>The number of VOWELS: {{ result.VowelCount }}</p>
+    <p>The number of CONSONANTS: {{ result.ConsonantCount }}</p>
+    <p>The firstname + last name entered: {{ result.OriginalName }}</p>
+    <p>The reverse version of the firstname and lastname: {{ result.ReversedName }}</p>
+    <pre>{{ result.JsonData | json }}</pre>
+  </mat-card>

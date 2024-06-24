@@ -1,0 +1,47 @@
+<mat-card>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <mat-form-field>
+            <mat-label>First Name</mat-label>
+            <input matInput id="firstName" formControlName="firstName" required>
+            <mat-error
+                *ngIf="userForm.get('firstName')?.invalid && (userForm.get('firstName')?.dirty || userForm.get('firstName')?.touched)">
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Last Name</mat-label>
+            <input matInput id="lastName" formControlName="lastName" required>
+            <mat-error
+                *ngIf="userForm.get('lastName')?.invalid && (userForm.get('lastName')?.dirty || userForm.get('lastName')?.touched)">
+            </mat-error>
+        </mat-form-field>
+
+        <div formArrayName="socialSkills">
+            <label>Social Skills</label>
+            <button mat-raised-button color="primary" type="button" (click)="addSocialSkill()">Add Social Skill</button>
+            <div *ngFor="let skill of socialSkills.controls; let i = index">
+                <mat-form-field>
+                    <input matInput [formControlName]="i" placeholder="Social Skill">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div formArrayName="socialAccounts">
+            <label>Social Accounts</label>
+            <button mat-raised-button color="primary" type="button" (click)="addSocialAccount()">Add Social
+                Account</button>
+            <div *ngFor="let account of socialAccounts.controls; let i = index" [formGroupName]="i">
+                <mat-form-field>
+                    <mat-label>Type</mat-label>
+                    <input matInput formControlName="type" placeholder="Type">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Address</mat-label>
+                    <input matInput formControlName="address" placeholder="Address">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+    </form>
+</mat-card>

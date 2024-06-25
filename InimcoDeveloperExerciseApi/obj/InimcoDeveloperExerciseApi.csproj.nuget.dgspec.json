@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jensuenk/Desktop/InimcoDeveloperExerciseApi/InimcoDeveloperExerciseApi.csproj": {}
+    "/Users/jensuenk/Desktop/InimcoDeveloperExercise/InimcoDeveloperExerciseApi/InimcoDeveloperExerciseApi.csproj": {}
   },
   "projects": {
-    "/Users/jensuenk/Desktop/InimcoDeveloperExerciseApi/InimcoDeveloperExerciseApi.csproj": {
+    "/Users/jensuenk/Desktop/InimcoDeveloperExercise/InimcoDeveloperExerciseApi/InimcoDeveloperExerciseApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jensuenk/Desktop/InimcoDeveloperExerciseApi/InimcoDeveloperExerciseApi.csproj",
+        "projectUniqueName": "/Users/jensuenk/Desktop/InimcoDeveloperExercise/InimcoDeveloperExerciseApi/InimcoDeveloperExerciseApi.csproj",
         "projectName": "InimcoDeveloperExerciseApi",
-        "projectPath": "/Users/jensuenk/Desktop/InimcoDeveloperExerciseApi/InimcoDeveloperExerciseApi.csproj",
+        "projectPath": "/Users/jensuenk/Desktop/InimcoDeveloperExercise/InimcoDeveloperExerciseApi/InimcoDeveloperExerciseApi.csproj",
         "packagesPath": "/Users/jensuenk/.nuget/packages/",
-        "outputPath": "/Users/jensuenk/Desktop/InimcoDeveloperExerciseApi/obj/",
+        "outputPath": "/Users/jensuenk/Desktop/InimcoDeveloperExercise/InimcoDeveloperExerciseApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/jensuenk/.nuget/NuGet/NuGet.Config"
@@ -43,9 +43,33 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.9.2, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.HealthChecks": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Versioning": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.6, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

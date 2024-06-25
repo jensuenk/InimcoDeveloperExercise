@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InimcoDeveloperExerciseApi.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8667f30ac20635ec91e5ee6df5024bbe407fee4e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32a415267c29871fba80b21c570de755e557dcf7")]
 [assembly: System.Reflection.AssemblyProductAttribute("InimcoDeveloperExerciseApi.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InimcoDeveloperExerciseApi.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

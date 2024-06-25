@@ -29,8 +29,18 @@ builder.Services.AddValidatorsFromAssemblyContaining<Program>();
 // Add Health Checks
 builder.Services.AddHealthChecks();
 
-
 builder.Services.AddScoped<IUserProfileRepository, UserProfileRepository>();
+
+// Configure CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngularApp", builder =>
+    {
+        builder.WithOrigins("http://localhost:4200") // Adjust the URL to match your Angular app's URL
+        .AllowAnyHeader()
+        .AllowAnyMethod();
+    });
+});
 
 var app = builder.Build();
 
@@ -48,6 +58,7 @@ if (app.Environment.IsDevelopment())
 app.UseSerilogRequestLogging(); // Enable Serilog request logging
 
 app.UseHttpsRedirection();
+app.UseCors("AllowAngularApp"); // Enable CORS using the policy
 app.UseAuthorization();
 app.MapControllers();
 app.MapHealthChecks("/health");

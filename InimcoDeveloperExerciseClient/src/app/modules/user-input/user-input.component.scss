@@ -1,0 +1,43 @@
+mat-card {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+mat-form-field {
+    display: inline-block;
+    width: 100%;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+
+    .form-container-fields {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    button[mat-icon-button] {
+        margin-left: 10px;
+    }
+
+    button[mat-raised-button] {
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+.submit-button {
+    margin-top: 20px;
+    width: 100%;
+
+    button {
+        width: 100%;
+    }
+}
+
+h4 {
+    margin-top: 20px;
+}

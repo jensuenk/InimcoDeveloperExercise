@@ -9,7 +9,6 @@ namespace SocialSkillsApi.Validators
         {
             RuleFor(x => x.FirstName).NotEmpty().WithMessage("First name is required.");
             RuleFor(x => x.LastName).NotEmpty().WithMessage("Last name is required.");
-            RuleFor(x => x.SocialSkills).NotEmpty().WithMessage("Social skills are required.");
             RuleForEach(x => x.SocialAccounts).SetValidator(new SocialAccountValidator());
         }
     }

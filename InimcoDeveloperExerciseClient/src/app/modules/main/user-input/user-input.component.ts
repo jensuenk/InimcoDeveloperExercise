@@ -1,10 +1,10 @@
 
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormArray, ReactiveFormsModule } from '@angular/forms';
-import { UserService } from '../user.service';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
+import { UserService } from '../../../providers/services/user.service';
 
 @Component({
   selector: 'app-user-input',

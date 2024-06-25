@@ -79,3 +79,4 @@
 /Users/jensuenk/Desktop/InimcoDeveloperExercise/InimcoDeveloperExerciseApi/bin/Debug/net8.0/Serilog.Sinks.Console.dll
 /Users/jensuenk/Desktop/InimcoDeveloperExercise/InimcoDeveloperExerciseApi/bin/Debug/net8.0/Serilog.Sinks.Debug.dll
 /Users/jensuenk/Desktop/InimcoDeveloperExercise/InimcoDeveloperExerciseApi/bin/Debug/net8.0/Serilog.Sinks.File.dll
+/Users/jensuenk/Desktop/InimcoDeveloperExercise/InimcoDeveloperExerciseApi/obj/Debug/net8.0/InimcoDeveloperExerciseApi.sourcelink.json

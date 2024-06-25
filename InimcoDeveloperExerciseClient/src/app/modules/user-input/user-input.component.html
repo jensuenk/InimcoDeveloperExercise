@@ -1,0 +1,64 @@
+<mat-card>
+    <h1>User Profile Form</h1>
+
+    <form [formGroup]="userProfileForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+            <mat-label>First Name</mat-label>
+            <input matInput formControlName="firstName" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="lastName" required />
+        </mat-form-field>
+
+        <h4>Social Skills</h4>
+        <div formArrayName="socialSkills">
+            <div *ngFor="let skill of socialSkills.controls; let i = index;" class="form-container">
+                <mat-form-field appearance="fill">
+                    <mat-label>Skill</mat-label>
+                    <input matInput [formControlName]="i" />
+                </mat-form-field>
+                <button mat-icon-button color="warn" type="button" (click)="removeSocialSkill(i)">
+                    <mat-icon>remove_circle</mat-icon>
+                </button>
+            </div>
+        </div>
+        <button mat-raised-button color="primary" type="button" (click)="addSocialSkill()">
+            Add Skill
+        </button>
+
+        <h4>Social Accounts</h4>
+        <div formArrayName="socialAccounts">
+            <div *ngFor="let account of socialAccounts.controls; let i = index" [formGroupName]="i" class="form-container">
+                <div class="form-container-fields">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Type</mat-label>
+                        <mat-select formControlName="type">
+                            <mat-option *ngFor="let type of accountTypes" [value]="type">
+                                {{ type }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Account name</mat-label>
+                        <input matInput formControlName="address" />
+                    </mat-form-field>
+                </div>
+                <button mat-icon-button color="warn" type="button" (click)="removeSocialAccount(i)">
+                    <mat-icon>remove_circle</mat-icon>
+                </button>
+            </div>
+        </div>
+        <button mat-raised-button color="primary" type="button" (click)="addSocialAccount()">
+            Add Account
+        </button>
+
+        <div class="submit-button">
+            <button mat-raised-button color="accent" type="submit" [disabled]="userProfileForm.invalid">Submit</button>
+        </div>
+    </form>
+</mat-card>
+
+<app-display-result [response]="response" *ngIf="response"></app-display-result>

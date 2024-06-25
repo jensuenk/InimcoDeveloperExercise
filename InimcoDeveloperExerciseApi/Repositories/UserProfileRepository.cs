@@ -20,7 +20,14 @@ namespace SocialSkillsApi.Repositories
             if (File.Exists(FilePath))
             {
                 var json = File.ReadAllText(FilePath);
-                userProfiles = JsonSerializer.Deserialize<List<UserProfile>>(json);
+                if (!string.IsNullOrEmpty(json))
+                {
+                    var deserializedProfiles = JsonSerializer.Deserialize<List<UserProfile>>(json);
+                    if (deserializedProfiles != null)
+                    {
+                        userProfiles = deserializedProfiles;
+                    }
+                }
             }
             userProfiles.Add(userProfile);
             File.WriteAllText(FilePath, JsonSerializer.Serialize(userProfiles));
